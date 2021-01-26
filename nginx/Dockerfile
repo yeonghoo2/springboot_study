@@ -1,5 +1,2 @@
 FROM nginx
-# COPY . /app/
-WORKDIR /app
-USER daemon
-EXPOSE 80
+COPY nginx.conf /etc/nginx/conf.d/default.conf
