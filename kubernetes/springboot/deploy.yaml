@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot
+  namespace: devops
+  labels:
+    app: springboot
+    version: v1
+  annotations:
+    configmap.reloader.stakater.com/reload: springboot-config
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springboot
+  template:
+    metadata:
+      labels:
+        app: springboot
+        version: v1  
+    spec:
+      serviceAccountName: springboot
+      containers:
+      - name: springboot
+        image: springboot-study:springboot
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: springboot-config
