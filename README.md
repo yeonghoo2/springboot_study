@@ -11,3 +11,4 @@ preparations
 1. start springboot with springboot initializer
 
 namespace : devops
+docker image local

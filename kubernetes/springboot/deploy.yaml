@@ -19,7 +19,6 @@ spec:
         app: springboot
         version: v1  
     spec:
-      serviceAccountName: springboot
       containers:
       - name: springboot
         image: springboot-study:springboot
