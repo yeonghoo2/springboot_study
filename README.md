@@ -1,17 +1,15 @@
 # springboot_study
 
 ### preparations
-<ol>
-jdk
-gradle
-docker
-kubenetes
-kubectl
-istioctl
-eksctl
-awscli
-fluxctl
-</ol>
+- jdk
+- gradle
+- docker
+- kubenetes
+- kubectl
+- istioctl
+- eksctl
+- awscli
+- fluxctl
 
 <ul>create eks cluster</ul>
 ```bash
