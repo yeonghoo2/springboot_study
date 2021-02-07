@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: springboot-gateway
+  namespace: devops
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 443 # loadbalancer forwarding port
+      name: http # http or http2
+      protocol: HTTP # HTTP or HTTP2
+    hosts:
+    - "*" # springboot.yeonghoo2.com

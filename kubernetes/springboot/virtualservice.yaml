@@ -1,0 +1,21 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: springboot-virtualservice
+  namespace: devops
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - springboot-gateway
+  http:
+  - route:
+    - destination:
+        host: springboot
+        # subset: v1
+        port:
+          number: 8080 # svc port
+    # timeout: 1s
+    # retries:
+    #   attempts: 3
+    #   perTryTimeout: 3s # default 0.25s

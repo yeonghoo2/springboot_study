@@ -1,0 +1,9 @@
+fluxctl install \
+--git-user=${user} \
+--git-email=${email} \
+--git-url=git@github.com:${org/repo} \
+--git-branch ${branch} \
+--sync-garbage-collection \
+--git-poll-interval=30s \
+--git-path=kuberenetes \
+--namespace=flux | kubectl apply -f -

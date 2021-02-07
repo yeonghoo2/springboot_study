@@ -1,0 +1,21 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: nginx-virtualservice
+  namespace: devops
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - nginx-gateway
+  http:
+  - route:
+    - destination:
+        host: nginx
+        # subset: v1
+        port:
+          number: 80 # svc port
+    # timeout: 1s
+    # retries:
+    #   attempts: 3
+    #   perTryTimeout: 3s # default 0.25s
