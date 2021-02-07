@@ -3,8 +3,11 @@ fluxctl install \
 --git-email=${email} \
 --git-url=git@github.com:${org/repo} \
 --git-branch ${branch} \
---git-path=kuberenetes \
+--git-path=kubernetes \
 --namespace=flux | kubectl apply -f -
+
+# get token
+fluxctl identity --k8s-fwd-ns flux
 
 kubectl edit deploy flux -n flux
 - --sync-garbage-collection
