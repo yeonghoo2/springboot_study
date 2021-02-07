@@ -30,8 +30,5 @@ kubectl apply -f manifest.yaml
 istioctl install -f internal.yaml
 ```
 6. apply yaml
-
-7. start springboot with springboot initializer
-
-namespace : devops
-docker image local
+7. build
+8. create namespace & install flux(gitOps)
