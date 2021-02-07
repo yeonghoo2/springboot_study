@@ -1,7 +1,7 @@
 # springboot_study
 
 ### preparations
-<uo>
+<ol>
 jdk
 gradle
 docker
@@ -11,27 +11,27 @@ istioctl
 eksctl
 awscli
 fluxctl
-</uo>
+</ol>
 
-<uo>create eks cluster</uo>
+<ul>create eks cluster</ul>
 ```bash
 eksctl create cluster -f cluster.yaml
 ```
-<uo>create eks managed worker node</uo>
-<uo>create namespace & istio injection</uo>
-<uo>install istio (create ingress gateway)</uo>
+<ul>create eks managed worker node</ul>
+<ul>create namespace & istio injection</ul>
+<ul>install istio (create ingress gateway)</ul>
 ```bash
 istioctl manifest generate > manifest.yaml
 # set up annotation in service
 kubectl apply -f manifest.yaml
 ```
-<uo>(optional) create internal ingress gateway</uo>
+<ul>(optional) create internal ingress gateway</ul>
 ```bash
 istioctl install -f internal.yaml
 ```
-<uo>apply yaml</uo>
+<ul>apply yaml</ul>
 
-<uo>start springboot with springboot initializer</uo>
+<ul>start springboot with springboot initializer</ul>
 
 namespace : devops
 docker image local
