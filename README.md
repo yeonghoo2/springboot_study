@@ -11,25 +11,27 @@
 - awscli
 - fluxctl
 
-<ol>create eks cluster</ol>
+
+### action
+ + create eks cluster
 ```bash
 eksctl create cluster -f cluster.yaml
 ```
-<ol>create eks managed worker node</ol>
-<ol>create namespace & istio injection</ol>
-<ol>install istio (create ingress gateway)</ol>
+ + create eks managed worker node
+ + create namespace & istio injection
+ + install istio (create ingress gateway)
 ```bash
 istioctl manifest generate > manifest.yaml
 # set up annotation in service
 kubectl apply -f manifest.yaml
 ```
-<ol>(optional) create internal ingress gateway</ol>
+ + (optional) create internal ingress gateway
 ```bash
 istioctl install -f internal.yaml
 ```
-<ol>apply yaml</ol>
+ + apply yaml
 
-<ol>start springboot with springboot initializer</ol>
+ + start springboot with springboot initializer
 
 namespace : devops
 docker image local
