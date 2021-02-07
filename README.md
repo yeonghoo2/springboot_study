@@ -32,3 +32,6 @@ istioctl install -f internal.yaml
 6. apply yaml
 7. build
 8. create namespace & install flux(gitOps)
+
+
+...ing
