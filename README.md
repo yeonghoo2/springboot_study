@@ -29,9 +29,9 @@ kubectl apply -f manifest.yaml
 ```bash
 istioctl install -f internal.yaml
 ```
-6. apply yaml
+6. apply kubernetes yaml
 7. build
+```bash
+./gradlew
+```
 8. create namespace & install flux(gitOps)
-
-
-...ing

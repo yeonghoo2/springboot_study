@@ -6,7 +6,7 @@ fluxctl install \
 --git-path=kubernetes \
 --namespace=flux | kubectl apply -f -
 
-# get token
+# get token(public key, in github)
 fluxctl identity --k8s-fwd-ns flux
 
 kubectl edit deploy flux -n flux
